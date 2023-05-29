@@ -1,0 +1,44 @@
+Mock Exchange Server
+================================
+
+You do not need to know anything about this server to complete this project. This information here is provided in case you are curious.
+
+If the server stopped running or if you closed it accidentally, double click "startserver.bat" on the desktop to start it again.
+
+The server keeps a list of available stocks and updates the market price per share for each of them every 5 seconds using a fluctuation prediction. The previous trend (rising or falling) has a 60% of continuing. The range of fluctuation for each iteration is -3.0% to +2.999999%. The minimum price is $1.00.
+
+The server provides two Restful API access paths:
+
+GET /quote?symbol=[symbol]
+
+will return an array of matching stocks, it's full name and it's market price per share in a data structure like this (usually only has one stock since symbols are supposed to be unique):
+
+[
+    {
+        "symbol" : "SYM",
+        "fullName" : "full name of the stock",
+        "price" : 9.99
+    }
+]
+
+GET /listing?match=[pattern]
+
+will return an array of matching stock symbols and full names that have a partial string of pattern in its symbol or full name. It is returned in a data structure like this (empty array if no match):
+
+[
+    {
+        "symbol" : "SYM1",
+        "fullName" : "full name of stock 1",
+    },
+
+    {
+        "symbol" : "SYM2",
+        "fullName" : "full name of stock 2
+    }
+    
+        .
+        .
+        .   
+]
+
+(C) 2021 Coursera, Inc.
