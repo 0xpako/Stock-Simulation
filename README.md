@@ -2,6 +2,8 @@
 
 Powered by AngularJS, Running on a Custom Server
 
+<img align="center" src="https://raw.githubusercontent.com/0xpako/Stock-Simulation/main/images/DashboardSS.jpg" alt="dashboard" height="284" width="437" />
+
 # Project Setup
 
 ### Installation
